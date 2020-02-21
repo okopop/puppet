@@ -16,11 +16,11 @@ apply: ## Run puppet apply locally with --noop
 ifeq ("$(wildcard examples/init.pp)","examples/init.pp")
 	${puppet} apply examples/init.pp --noop
 else
-	echo "missing examples/init.pp"
+	@echo "Skipping 'puppet apply' step because missing examples/init.pp"
 endif
 
 release: ## Release module
-	echo "git tag->bb->r10k"
+	@echo "Not implemented - release puppet module with git tag->bb->r10k"
 
 deploy: ## Upload module to repository
-	echo "upload puppet module"
+	@echo "Not implemented - upload puppet module to repository"
